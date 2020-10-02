@@ -9,20 +9,24 @@ using System.Threading.Tasks;
 
 namespace Libreria
 {
-    class Alumno:Persona
+    public class Alumno : Persona
     {
         private int _codigo;
-        private string _credencial;
+
+        public Alumno(string nombre, string apellido, DateTime fecha, int codigo) : base(nombre, apellido, fecha)
+        {
+            this._codigo = codigo;
+        }
+
         public int Codigo { get { return this._codigo; }}
-        public string Credencial { get { return this._credencial; } set { this._credencial = value; } }
 
         public string GetCredenciales()
         {
-            return "";
+            return string.Format("Codigo {0} - {1}, {2}",this._codigo,base.Apellido,base.Nombre);
         }
         public override string ToString()
         {
-            return base.ToString();
+            return this.GetCredenciales();
         }
     }
 }

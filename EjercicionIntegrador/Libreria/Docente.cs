@@ -8,7 +8,10 @@ namespace Libreria
 {
     class Docente:Empleado
     {
-        public string GetNombreCompleto()
-        { return ""; }
+        public Docente(string nombre, string apellido, DateTime fecha, int legajo, DateTime fechaingreso) : base(nombre, apellido, fecha,legajo,fechaingreso)
+        {            
+        }
+        public override string GetNombreCompleto()
+        { return "Docente "+base.Nombre; }
     }
 }

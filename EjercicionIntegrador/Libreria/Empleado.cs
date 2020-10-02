@@ -2,31 +2,45 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices.ComTypes;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Libreria
 {
-    class Empleado:Persona
+    public abstract class Empleado:Persona
     {
         private DateTime _fechaIngreso;
         private int _legajo;
         private List<Salario> _salarios;
 
-        public void AgregarSalario()
-        { }
-        public override bool Equals(object a)
+        public Empleado(string nombre, string apellido, DateTime fecha, int legajo, DateTime fechaingreso):base(nombre, apellido, fecha)
         {
-            return true;
+            this._legajo = legajo;
+            this._fechaIngreso = fechaingreso;
         }
+
+        public void AgregarSalario(double bruto) //UML: AgregarSalario(Salario):void
+        {
+            this._salarios.Add(new Salario(bruto));
+        }
+        /*public override bool Equals(object a, object b)
+        {
+            Empleado _a = (Empleado)a;
+            Empleado _b = (Empleado)b;
+
+            if (_a.Legajo == _b.Legajo)
+                return true;
+            else
+                return false;
+        }*/
         public string GetCredencial()
         {
-            return "";
+            return string.Format("{0} - {1} Salario ${2}",this.Legajo,base.GetNombreCompleto(),this.UltimoSalario) ;
         }
-        public string GetNombreCompleto()
-        {
-            return "";
-        }
+        public abstract string GetNombreCompleto();
+
         public override string ToString()
         {
             return base.ToString();
@@ -34,10 +48,9 @@ namespace Libreria
 
         //propiedades
         public int Antiguedad
-        { get; set; }
+        { get { return DateTime.Now.Year - this._fechaIngreso.Year; } }
         public DateTime FechaIngreso
-        { get; set; }
-
+        { get { return this._fechaIngreso; } set { this._fechaIngreso = value; } }
         public DateTime FechaNacimiento
         { get; set; }
         public int Legajo
@@ -45,6 +58,6 @@ namespace Libreria
         public List<Salario> Salarios
         { get { return this._salarios; } set { this._salarios = value; } }
         public Salario UltimoSalario
-        { get; set; }
+        { get { return _salarios.LastOrDefault(); } }
     }
 }

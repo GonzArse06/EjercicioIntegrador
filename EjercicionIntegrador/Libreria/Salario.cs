@@ -7,8 +7,12 @@ using System.Threading.Tasks;
 
 namespace Libreria
 {
-    class Salario
+    public class Salario
     {
+        const double _jubilacion = 0.11f;
+        const double _osocial = 0.03f;
+        const double _insspj = 0.03f;
+
         private double _bruto;
         private string _codigoTransferencia;
         private double _descuento;
@@ -16,19 +20,21 @@ namespace Libreria
 
         public double GetSalarioNeto()
         {
-            return 1.2d;
+            return this._bruto * (1 - _jubilacion -_osocial-_insspj);
         }
         public Salario(double a)
         {
-
+            this._bruto = a;
+            this._fecha = DateTime.Now;
+            this._descuento = 0.17d;
         }
-        public string Bruto { get { return this._bruto; } set { this._bruto = value; } }
+        public double Bruto { get { return this._bruto; } set { this._bruto = value; } }
 
         public string CodigoTransferencia { get { return this._codigoTransferencia; } set { this._codigoTransferencia = value; } }
 
-        public string Descuento { get { return this._descuento; } set { this._descuento= value; } }
+        public double Descuento { get { return this._descuento; } set { this._descuento= value; } }
 
-        public string Fecha { get { return this._fecha; } set { this._fecha= value; } }
+        public DateTime Fecha { get { return this._fecha; } set { this._fecha= value; } }
 
 
     }

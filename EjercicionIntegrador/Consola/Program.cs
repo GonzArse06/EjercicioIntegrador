@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Libreria;
 
 namespace Consola
 {
@@ -10,6 +11,7 @@ namespace Consola
     {
         static void Main(string[] args)
         {
+            Facultad a = new Facultad();
         }
     }
 }

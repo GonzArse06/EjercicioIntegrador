@@ -10,10 +10,14 @@ namespace Libreria
 {
     class Bedel:Empleado
     {
-        private string _apodo;
-        public string GetNombreCompleto()
+        public Bedel(string nombre, string apellido, DateTime fecha, int legajo, DateTime fechaingreso, string apodo) : base(nombre, apellido, fecha, legajo, fechaingreso)
         {
-            return "";
+            this._apodo = apodo;
+        }
+        private string _apodo;
+        public override string GetNombreCompleto()
+        {
+            return "Bedel "+this._apodo;
         }
         public string Apodo
         { get { return this._apodo; } set { this._apodo = value; } }
