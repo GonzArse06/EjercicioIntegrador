@@ -28,5 +28,16 @@ namespace Libreria
         {
             return this.GetCredenciales();
         }
+        public override bool Equals(object obj)
+        {
+            if(obj==null)
+                return false;
+            if (!(obj is Alumno))
+                return false;
+            if(this._codigo ==((Alumno)obj)._codigo)
+                return true;
+            else
+                return false;
+        }
     }
 }

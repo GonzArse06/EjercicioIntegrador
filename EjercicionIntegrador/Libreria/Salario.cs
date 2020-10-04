@@ -27,6 +27,7 @@ namespace Libreria
             this._bruto = a;
             this._fecha = DateTime.Now;
             this._descuento = 0.17d;
+            this._codigoTransferencia = "1";
         }
         public double Bruto { get { return this._bruto; } set { this._bruto = value; } }
 

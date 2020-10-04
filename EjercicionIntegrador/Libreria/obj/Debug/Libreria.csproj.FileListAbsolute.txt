@@ -1,0 +1,6 @@
+C:\Users\gcarranza\Documents\GitHub\EjercicioIntegrador\EjercicionIntegrador\Libreria\bin\Debug\Libreria.dll
+C:\Users\gcarranza\Documents\GitHub\EjercicioIntegrador\EjercicionIntegrador\Libreria\bin\Debug\Libreria.pdb
+C:\Users\gcarranza\Documents\GitHub\EjercicioIntegrador\EjercicionIntegrador\Libreria\obj\Debug\Libreria.csprojAssemblyReference.cache
+C:\Users\gcarranza\Documents\GitHub\EjercicioIntegrador\EjercicionIntegrador\Libreria\obj\Debug\Libreria.csproj.CoreCompileInputs.cache
+C:\Users\gcarranza\Documents\GitHub\EjercicioIntegrador\EjercicionIntegrador\Libreria\obj\Debug\Libreria.dll
+C:\Users\gcarranza\Documents\GitHub\EjercicioIntegrador\EjercicionIntegrador\Libreria\obj\Debug\Libreria.pdb

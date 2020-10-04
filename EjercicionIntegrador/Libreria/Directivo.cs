@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Libreria
 {
-    class Directivo:Empleado
+    public class Directivo:Empleado
     {
         public Directivo(string nombre, string apellido, DateTime fecha, int legajo, DateTime fechaingreso) : base(nombre, apellido, fecha, legajo, fechaingreso)
         {

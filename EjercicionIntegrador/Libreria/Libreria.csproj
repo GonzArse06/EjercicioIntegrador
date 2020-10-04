@@ -45,6 +45,7 @@
     <Compile Include="Bedel.cs" />
     <Compile Include="Directivo.cs" />
     <Compile Include="Docente.cs" />
+    <Compile Include="DuplicadoException.cs" />
     <Compile Include="Empleado.cs" />
     <Compile Include="Facultad.cs" />
     <Compile Include="Persona.cs" />

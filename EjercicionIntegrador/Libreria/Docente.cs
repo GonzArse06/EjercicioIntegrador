@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Libreria
 {
-    class Docente:Empleado
+    public class Docente:Empleado
     {
         public Docente(string nombre, string apellido, DateTime fecha, int legajo, DateTime fechaingreso) : base(nombre, apellido, fecha,legajo,fechaingreso)
         {            

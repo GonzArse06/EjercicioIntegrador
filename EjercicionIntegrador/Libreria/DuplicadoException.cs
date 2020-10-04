@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Libreria
 {
-    public enum TipoEmpleado
+    public class DuplicadoException:Exception
     {
-        Bedel=1,Docente,Directivo
+        public DuplicadoException(string mensaje) : base(mensaje)
+        { }
     }
 }

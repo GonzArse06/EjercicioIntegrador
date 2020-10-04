@@ -8,7 +8,7 @@ using System.Xml.Schema;
 
 namespace Libreria
 {
-    class Bedel:Empleado
+    public class Bedel:Empleado
     {
         public Bedel(string nombre, string apellido, DateTime fecha, int legajo, DateTime fechaingreso, string apodo) : base(nombre, apellido, fecha, legajo, fechaingreso)
         {

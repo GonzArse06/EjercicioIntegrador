@@ -25,17 +25,18 @@ namespace Consola
         {
             return "";
         }
-        public string GetNombreCompleto()
+        public virtual string GetNombreCompleto()
         {
-            return "";
+            return string.Format("{0},{1}",this._apellido,this._nombre);
         }
         
 
         public string Apellido { get { return this._apellido; } set { this._apellido = value; } }
 
         public string Nombre { get { return this._nombre; } set { this._nombre = value; } }
+        public DateTime FechaNacimiento { get { return this._fechaNac; } set { this._fechaNac = value; } }
 
-        public int Edad { get { return DateTime.Now.Year - this._fechaNac.Year; } }
+        public int Edad { get { return DateTime.Now.Year - this._fechaNac.Year; } } //arreglar esto (hoy - fecha nac).totaldays /365;
 
     }
 }
